@@ -1,0 +1,21 @@
+<section class="calculatar-layout">
+  <div class="calculatar-content">
+    <h1>Calculator</h1>
+    <div class="textarea">{{ expression.join("") }}</div>
+    <br />
+    <div>
+      <button *ngFor="let button of buttons" (click)="addOperand(button)">
+        {{ button }}
+      </button>
+    </div>
+    <div>
+      <button
+        *ngFor="let operator of operators"
+        (click)="addOperator(operator)"
+      >
+        {{ operator }}
+      </button>
+      <button (click)="clear()" class="clearButton">AC</button>
+    </div>
+  </div>
+</section>
